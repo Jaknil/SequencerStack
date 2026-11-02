@@ -54,7 +54,7 @@ Thoughts
 - Shared input and output pin would be cool but there is a significant risk of self latching. Perhaps if the out is 5V and stepped up later through an input that takes many different voltages like the optocoupler?
 
 ## Use a PLC?
-I have made a LogoSoft progam with 4 shift registers to test the general idea. Seems to work fine. But the software caps the use of shift registers at 4, which is insulting. I probably need 24. I can make my own shift registers with gates and put them in UserDefinedFunctions but the scan speed of the Logo-programs is potentially silly slow, I read specs of 22-30ms so its not promising. Might do it anyway as an exercise. I HMI would have to be used to display the queues, it does not have enough IOs.  
+I have made a LogoSoft progam with 4 shift registers to test the general idea. Seems to work fine. But the software caps the use of shift registers at 4, which is insulting. I probably need 24. I have tested out making my own shift registers with gates and putting them in UserDefinedFunctions (max 64 of those with limited IOs) but the scan speed of the Logo-programs is potentially silly slow, I read specs of 22-30ms so its not promising. Might do it anyway as an exercise. I HMI would have to be used to display the queues, it does not have enough IOs and the UDFs might max out anyway. The UDF test files in this repo are work in progress and does not work yet. Next test is to try stepping rs latches with a common clock to learn the pequiliarities of PLC timing.  
   - [Jpg of Code](Images/logo_4_standard_shifts.jpg)
   - [LogoSoft code](Shift_register_Organ_4_standard_regs.lsc)
 
